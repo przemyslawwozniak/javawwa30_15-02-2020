@@ -2,13 +2,12 @@ package pl.sda.javawwa30;
 
 public class Computer {
 
+    private String name;
     private Motherboard motherboard;
-    private int hd;
-    private String monitor;
-    private String printer;
 
 
-    public Computer(Motherboard motherboard) {
+    public Computer(String name, Motherboard motherboard) {
+        this.name = name;
         this.motherboard = motherboard;
     }
 
@@ -16,13 +15,16 @@ public class Computer {
     @Override
     public String toString() {
         return "Computer's specification:\n" +
-                motherboard +
-                "\nhd: " + hd +
-                "\nmonitor: " + monitor +
-                "\nprinter: " + printer;
+                "\nname: " + name +
+                "\n" + motherboard +
+                "\nTOTAL SCORE: " + calcTotalScore();
     }
 
     public Motherboard getMotherboard() {
         return motherboard;
+    }
+
+    public double calcTotalScore() {
+        return motherboard.calcScore();
     }
 }

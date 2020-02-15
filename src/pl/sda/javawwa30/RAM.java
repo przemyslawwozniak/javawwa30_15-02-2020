@@ -2,6 +2,8 @@ package pl.sda.javawwa30;
 
 public class RAM {
 
+    private static final int MAX_RAM = 64;
+
     private String name;
     private int size;   //in GBs
 
@@ -40,5 +42,9 @@ public class RAM {
      */
     public boolean isLargerThan(RAM other) {
         return this.getSize() > other.getSize();
+    }
+
+    public double calcScore() {
+        return 100 * ((this.size * 1.0)/MAX_RAM);
     }
 }
