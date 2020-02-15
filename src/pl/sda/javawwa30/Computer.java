@@ -15,4 +15,16 @@ public class Computer {
 
     }
 
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "motherboard='" + motherboard + '\'' +
+                ", processor='" + processor + '\'' +
+                ", cores=" + cores +
+                ", ram=" + ram +
+                ", hd=" + hd +
+                ", monitor='" + monitor + '\'' +
+                ", printer='" + printer + '\'' +
+                '}';
+    }
 }
