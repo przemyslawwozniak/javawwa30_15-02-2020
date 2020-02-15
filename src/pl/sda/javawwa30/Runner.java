@@ -30,7 +30,7 @@ public class Runner {
         myComputer.getMotherboard().add(ram16);  //8,4,8,16
         myComputer.getMotherboard().add(ram16_2nd);  //pojdzie w miejsce o idx = 1 czyli ram4 ---> 8, 16, 8, 16
         System.out.println(myComputer);
-        
+
         Computer myOtherComputer = new Computer("Fake Lenovo Weak", mb2);
         System.out.println(myOtherComputer);
 
